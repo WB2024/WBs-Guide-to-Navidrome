@@ -4,6 +4,8 @@
 
 *Based on community recommendations and best practices.*
 
+<a href="https://buymeacoffee.com/succinctrecords"><img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?logo=buy-me-a-coffee"></a>
+
 ---
 
 ## 📋 Table of Contents
@@ -15,9 +17,10 @@
 5. [Step 4: Set Up Playback Apps](#-step-4-set-up-playback-apps)
 6. [Step 5: Remote Access with Tailscale](#-step-5-remote-access-with-tailscale)
 7. [Step 6: Add Radio Stations](#-step-6-add-radio-stations)
-8. [Audio Quality Tips](#-audio-quality-tips)
-9. [Alternatives Considered](#-alternatives-considered)
-10. [Quick Reference Links](#-quick-reference-links)
+8. [Step 7: View Your Listening Stats (Navidrome Wrapped)](#-step-7-view-your-listening-stats-navidrome-wrapped)
+9. [Audio Quality Tips](#-audio-quality-tips)
+10. [Alternatives Considered](#-alternatives-considered)
+11. [Quick Reference Links](#-quick-reference-links)
 
 ---
 
@@ -33,6 +36,7 @@ Here's the full stack at a glance:
 | **Essentia Music Tagger** | AI-powered genre/mood tagging (replaces Picard's genres) | [GitHub](https://github.com/WB2024/Essentia-to-Metadata) |
 | **Artist Genre Metadata Enforcer** | Define your own genre per artist, enforce it everywhere | [GitHub](https://github.com/WB2024/Artist-Genre-Metadata-Enforcer) |
 | **Navidrome Radio Station Manager** | Add internet radio stations to Navidrome | [GitHub](https://github.com/WB2024/Add-Navidrome-Radios) |
+| **Navidrome Wrapped** | Spotify Wrapped–style listening stats | [GitHub](https://github.com/mdeik/Navidrome-Wrapped) |
 | **Feishin** | Desktop music player (Spotify-like UI) | [GitHub](https://github.com/jeffvli/feishin) |
 | **Symfonium** | Mobile music player (Android) | [symfonium.app](https://symfonium.app/) |
 | **Tailscale** | Secure remote access (no port forwarding) | [tailscale.com](https://tailscale.com/) |
@@ -438,6 +442,50 @@ Select stations → type "add" → they appear in Navidrome immediately!
 
 ---
 
+## 📊 Step 7: View Your Listening Stats (Navidrome Wrapped)
+
+📦 **[Navidrome Wrapped](https://github.com/mdeik/Navidrome-Wrapped)**
+
+**Navidrome Wrapped** is a beautiful, Spotify Wrapped–inspired client-side web app that generates comprehensive **all-time listening statistics** from your Navidrome server. See your top artists, albums, songs, genre and decade breakdowns, diversity scoring, rating analysis, audio quality insights, and shareable summary cards — all in a stunning interactive slideshow.
+
+### Key Features
+
+- **Pure client-side** — no backend server needed; runs entirely in your browser
+- **Privacy-first** — your credentials are never stored or sent anywhere except directly to your Navidrome instance; all processing is local
+- **Interactive slideshow** with 8 sections: Welcome, Listening Time, Top Artists, Top Albums, Top Songs, Diversity, Ratings, and Summary
+- **Interactive charts** for genre and decade distribution
+- **Shareable cards** — generates 9:16 share images of your stats
+- **Demo mode** — try it with sample data before connecting your server
+- **Caches results** in localStorage for 90 days so repeat visits are instant
+- **Live hosted version** available at [mdeik.github.io/Navidrome-Wrapped](https://mdeik.github.io/Navidrome-Wrapped/)
+
+### How to Use
+
+#### Option A: Use the Hosted Version (Easiest)
+
+Just visit **[mdeik.github.io/Navidrome-Wrapped](https://mdeik.github.io/Navidrome-Wrapped/)** and enter:
+- Your Navidrome server URL (e.g., `http://your-server-ip:4533` or `https://your-domain.com`)
+- Your username and password
+- Click **"Generate All-Time Wrapped"**
+
+#### Option B: Self-Host It
+
+It's just static files — no build step needed:
+
+```bash
+git clone https://github.com/mdeik/Navidrome-Wrapped.git
+cd Navidrome-Wrapped
+# Open index.html in your browser, or serve it:
+python3 -m http.server 8080
+# Then visit http://localhost:8080
+```
+
+> 💡 **Tailscale users:** If accessing your Navidrome remotely, use your Tailscale IP as the server URL (e.g., `http://100.x.y.z:4533`).
+
+> 🎮 **Try demo mode first** — Navidrome Wrapped includes a demo mode with sample data so you can explore the interface before connecting your own server.
+
+---
+
 ## 🎶 Audio Quality Tips
 
 These tips will help you get the best listening experience:
@@ -503,6 +551,7 @@ These alternatives are worth knowing about:
 | Essentia Music Tagger (AI Genres) | [github.com/WB2024/Essentia-to-Metadata](https://github.com/WB2024/Essentia-to-Metadata) |
 | Artist Genre Metadata Enforcer | [github.com/WB2024/Artist-Genre-Metadata-Enforcer](https://github.com/WB2024/Artist-Genre-Metadata-Enforcer) |
 | Navidrome Radio Station Manager | [github.com/WB2024/Add-Navidrome-Radios](https://github.com/WB2024/Add-Navidrome-Radios) |
+| Navidrome Wrapped (Listening Stats) | [github.com/mdeik/Navidrome-Wrapped](https://github.com/mdeik/Navidrome-Wrapped) |
 
 ---
 
@@ -518,10 +567,19 @@ Here's the recommended sequence for setting everything up from scratch:
 5. 🎧  Install Feishin (desktop) and/or Symfonium (mobile)
 6. 🌐  Set up Tailscale for remote access
 7. 📻  Add radio stations
-8. 🔊  Optimize your audio hardware chain
-9. 🎶  Enjoy your music!
+8. 📊  View your listening stats with Navidrome Wrapped
+9. 🔊  Optimize your audio hardware chain
+10. 🎶  Enjoy your music!
 ```
 
 ---
 
 *Happy listening!* 🎶
+
+---
+
+## ☕ Support
+
+If you found this guide helpful, consider buying me a coffee!
+
+<a href="https://buymeacoffee.com/succinctrecords"><img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?logo=buy-me-a-coffee"></a>
