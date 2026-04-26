@@ -1,0 +1,1 @@
+A complete, beginner-friendly guide to building the ultimate self-hosted music server with Navidrome — covering Docker setup, music tagging with Picard, genre fixing, smart playlists, radio stations, remote access, and more.
